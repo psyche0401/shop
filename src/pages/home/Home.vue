@@ -5,7 +5,12 @@
         <Menu></Menu>
       </Sider>
       <Layout>
-        <Header style="background-color: #fff;">Header</Header>
+        <Header style="background-color: #fff;">
+
+
+          <img src="../../assets/images/timg.jpg" style="width:50px;height:50px"></img>
+
+        </Header>
         <Content>
           <Breadcrumb style="margin: 10px 0 0 20px;">
             <BreadcrumbItem to="/">首页</BreadcrumbItem>
@@ -25,7 +30,6 @@
 <script>
   import Menu from './components/NavMenu'
   import Content from './components/Content'
-  import axios from 'axios'
   export default {
     name: 'home',
     components: {
@@ -35,9 +39,6 @@
     created(){
 
       this.$http.get('/api/index.json').then(this.getHomeInfoSucc)
-
-
-
     },
     data() {
       return {}
