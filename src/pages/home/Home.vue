@@ -1,58 +1,56 @@
 <template>
   <div>
-    <div class="pg_header"></div>
-    <div class="pg_content">
-      <div class="menu">
+    <Layout>
+      <Sider hide-trigger collapsible style="height: 100vh;">
         <Menu></Menu>
-      </div>
-      <div class="content">
+      </Sider>
+      <Layout>
+        <Header style="background-color: #fff;">Header</Header>
+        <Content>
+          <Breadcrumb style="margin: 10px 0 0 20px;">
+            <BreadcrumbItem to="/">首页</BreadcrumbItem>
+            <BreadcrumbItem>{{this.$store.state.header.mainHead}}</BreadcrumbItem>
+            <BreadcrumbItem v-if="$store.state.header.subHead">{{this.$store.state.header.subHead}}</BreadcrumbItem>
+          </Breadcrumb>
 
-        <div style="width:100%;height:100%;" class="pg-bg-img">
-        </div>
-
-      </div>
-    </div>
-
+          <Card :style="{margin: '10px', height: $store.state.windHeight - 115 + 'px'}">
+            <router-view></router-view>
+          </Card>
+        </Content>
+      </Layout>
+    </Layout>
   </div>
-  <!-- <Content></Content>   
-  <Head></Head> -->
 </template>
 
 <script>
-  import Menu from './components/menu'
-  import Head from './components/Head'
-  import Content from './components/Content'
+  import Menu from './components/NavMenu'
   export default {
     name: 'home',
     components: {
       Menu,
-      Head,
-      // Content
     },
     data() {
-      return {
-        msg: 'test'
-      }
+      return {}
     }
   }
 </script>
 
 <style lang='scss' scoped>
-  @import 'src/assets/styles/varbles.scss';
+  /*@import 'src/assets/styles/varbles.scss';*/
   body,
   html {
     margin: 0 auto;
     padding: 0;
     height: 100%;
     width: 100%;
-    background: $bgColor
+    /*background: $bgColor*/
   }
-  .pg_header {
+  /*.pg_header {
     height: 48px;
     background-color: #2459a2;
     color: white;
-  }
-  .pg_content .content {
+  }*/
+  /*.pg_content .content {
     position: fixed;
     top: 50px;
     right: 0;
@@ -61,12 +59,9 @@
     background-color: darkturquoise;
     overflow: auto;
     .pg-bg-img{
-
       background-image:url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1545929266396&di=e493202a36a5228815fd36d490777b1b&imgtype=0&src=http%3A%2F%2Fpic.90sjimg.com%2Fback_pic%2Fu%2F00%2F00%2F95%2F36%2F55e6b5ff363e6.jpg');
       background-repeat:no-repeat;
       background-size:100% 100%
-
     }
-
-  }
+  }*/
 </style>

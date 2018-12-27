@@ -6,7 +6,16 @@
 
 <script>
 export default {
-  name: 'App' 
+  name: 'App',
+  created () {
+    window.addEventListener("resize", this.handleHeight);
+    this.$store.commit('windHeight', window.innerHeight)
+  },
+  methods: {
+    handleHeight (event) {
+      this.$store.commit('windHeight', event.target.innerHeight)
+    }
+  }
 }
 </script>
 
