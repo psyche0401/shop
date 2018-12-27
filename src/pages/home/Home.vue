@@ -1,16 +1,12 @@
 <template>
   <div >
     
-          <Menu></Menu>
+    <div style="width:50%;height:400px;border:thin solid  #ccc;margin:auto">
 
-    home
+       {{msg}}
 
+    </div>
 
-<div class="a">2343213</div>
-
-    
-
-  
   </div>
 </template>
 
@@ -27,6 +23,7 @@ export default {
   },
   data () {
     return {
+      msg:'test'
     }
   }
 }
@@ -36,10 +33,8 @@ export default {
 
 @import 'src/assets/styles/varbles.scss';
 
-.a{
+body{
 
-    width:10px;
-    height: 50px;
     background: $bgColor
 }
 
