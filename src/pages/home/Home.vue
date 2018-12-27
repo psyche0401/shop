@@ -7,8 +7,11 @@
       </div>
       <div class="content">
 
-        <div style="width:100%;height:100%;" class="pg-bg-img">
-        </div>
+
+        <Input/>
+
+        <!-- <div style="width:100%;height:100%;" class="pg-bg-img">
+        </div> -->
 
       </div>
     </div>
@@ -22,6 +25,7 @@
   import Menu from './components/menu'
   import Head from './components/Head'
   import Content from './components/Content'
+  import axios from 'axios'
   export default {
     name: 'home',
     components: {
@@ -29,10 +33,29 @@
       Head,
       // Content
     },
+
+    created(){
+
+      this.$http.get('/api/index.json').then(this.getHomeInfoSucc)
+
+
+
+    },
     data() {
       return {
         msg: 'test'
       }
+    },
+    methods:{
+
+
+         getHomeInfoSucc(res){
+
+            console.log(res)
+
+        }
+       
+    
     }
   }
 </script>
@@ -60,13 +83,13 @@
     left: 202px;
     background-color: darkturquoise;
     overflow: auto;
-    .pg-bg-img{
+    // .pg-bg-img{
 
-      background-image:url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1545929266396&di=e493202a36a5228815fd36d490777b1b&imgtype=0&src=http%3A%2F%2Fpic.90sjimg.com%2Fback_pic%2Fu%2F00%2F00%2F95%2F36%2F55e6b5ff363e6.jpg');
-      background-repeat:no-repeat;
-      background-size:100% 100%
+    //   background-image:url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1545929266396&di=e493202a36a5228815fd36d490777b1b&imgtype=0&src=http%3A%2F%2Fpic.90sjimg.com%2Fback_pic%2Fu%2F00%2F00%2F95%2F36%2F55e6b5ff363e6.jpg');
+    //   background-repeat:no-repeat;
+    //   background-size:100% 100%
 
-    }
+    // }
 
   }
 </style>
