@@ -10,6 +10,28 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home,
+      children: [
+        {
+          path: 'test',
+          name: '测试',
+          icon: 'ios-navigate',
+          children: [
+            {
+              path: 'xxx', name: 'xxx'
+            }
+          ]
+        },
+        {
+          path: 'tl',
+          name: 'tl',
+          icon: 'ios-keypad'
+        },
+        {
+          path: 'xxxx',
+          name: 'xxxx',
+          icon: 'ios-analytics'
+        }
+      ]
     },
   ]
 })
