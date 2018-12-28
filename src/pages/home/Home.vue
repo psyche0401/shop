@@ -5,7 +5,12 @@
         <Menu></Menu>
       </Sider>
       <Layout>
-        <Header style="background-color: #fff;">Header</Header>
+        <Header style="background-color: #fff;">
+
+
+          <img src="../../assets/images/timg.jpg" style="width:50px;height:50px">
+
+        </Header>
         <Content>
           <NavBread></NavBread>
 

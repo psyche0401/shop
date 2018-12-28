@@ -13,7 +13,10 @@
     },
     methods: {
       handleHeight(event) {
-        this.$store.commit('windHeight', event.target.innerHeight)
+
+        setTimeout(() => {
+          this.$store.commit('windHeight', event.target.innerHeight)
+        }, 100)
       }
     }
   }
