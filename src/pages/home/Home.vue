@@ -5,11 +5,8 @@
         <Menu></Menu>
       </Sider>
       <Layout>
-        <Header style="background-color: #fff;">
-
-
-          <img src="../../assets/images/timg.jpg" style="width:50px;height:50px">
-
+        <Header class="menu-header">
+          <img src="../../assets/images/timg.jpg"  class="header-logo">
         </Header>
         <Content>
           <NavBread></NavBread>
@@ -57,5 +54,14 @@
     padding: 0;
     height: 100%;
     width: 100%;
+  }
+  .menu-header {
+    background-color: #fff;
+
+    .header-logo {
+      width: 50px;
+      height: 50px;
+      margin: 7px;
+    }
   }
 </style>
