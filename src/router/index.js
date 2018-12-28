@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/pages/home/Home'
+import Customer from '@/pages/customer-management/customer'
 
 Vue.use(Router);
 
@@ -30,6 +31,11 @@ export default new Router({
           path: 'xxxx',
           name: 'xxxx',
           icon: 'ios-analytics'
+        },
+        {
+          path: '/name',
+          name: 'c',
+          component: Customer
         }
       ]
     },

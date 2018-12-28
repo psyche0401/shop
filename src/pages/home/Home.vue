@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <Layout style="height: 100vh;">
-      <Sider hide-trigger collapsible>
+  <div >
+    <Layout>
+      <Sider hide-trigger collapsible style="height: 100vh;">
         <Menu></Menu>
       </Sider>
       <Layout>
@@ -11,7 +11,7 @@
         <Content>
           <NavBread></NavBread>
 
-          <Card :style="{margin: '10px', height: $store.state.windHeight - 115 + 'px'}">
+          <Card :style="{margin: '10px', height: $store.state.windHeight - 115 + 'px'}" >
             <router-view></router-view>
           </Card>
         </Content>

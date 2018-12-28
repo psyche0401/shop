@@ -9,6 +9,10 @@ import axios from 'axios'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
 
+
+import WtDataTable from './common/tabel/dataTabel.js'
+Vue.use(WtDataTable)
+
 Vue.use(iView);
 
 Vue.prototype.$http = axios;
