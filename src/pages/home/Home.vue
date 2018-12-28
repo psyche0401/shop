@@ -7,11 +7,7 @@
       <Layout>
         <Header style="background-color: #fff;">Header</Header>
         <Content>
-          <Breadcrumb style="margin: 10px 0 0 20px;">
-            <BreadcrumbItem to="/">首页</BreadcrumbItem>
-            <BreadcrumbItem>{{this.$store.state.header.mainHead}}</BreadcrumbItem>
-            <BreadcrumbItem v-if="$store.state.header.subHead">{{this.$store.state.header.subHead}}</BreadcrumbItem>
-          </Breadcrumb>
+          <NavBread></NavBread>
 
           <Card :style="{margin: '10px', height: $store.state.windHeight - 115 + 'px'}">
             <router-view></router-view>
@@ -23,46 +19,38 @@
 </template>
 
 <script>
-  import Menu from './components/NavMenu'
-  import Content from './components/Content'
-  import axios from 'axios'
+  import Menu from './components/NavMenu.vue'
+  import NavBread from './components/NavBread.vue'
+
   export default {
     name: 'home',
     components: {
       Menu,
+      NavBread
     },
-
-    created(){
-
+    created() {
       this.$http.get('/api/index.json').then(this.getHomeInfoSucc)
-
-
-
     },
     data() {
       return {}
     },
-    methods:{
+    methods: {
+      getHomeInfoSucc(res) {
 
+        console.log(res)
 
-         getHomeInfoSucc(res){
+      }
 
-            console.log(res)
-
-        }
-      
     }
   }
 </script>
 
 <style lang='scss' scoped>
-  /*@import 'src/assets/styles/varbles.scss';*/
   body,
   html {
     margin: 0 auto;
     padding: 0;
     height: 100%;
     width: 100%;
-    /*background: $bgColor*/
   }
 </style>

@@ -11,7 +11,7 @@ import 'iview/dist/styles/iview.css'
 
 Vue.use(iView);
 
-Vue.prototype.$http = axios
+Vue.prototype.$http = axios;
 
 
 Vue.config.productionTip = false;
@@ -22,6 +22,6 @@ new Vue({
   el: '#app',
   router,
   store,
-  components: { App },
+  components: {App},
   template: '<App/>'
 })

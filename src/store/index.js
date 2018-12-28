@@ -12,14 +12,14 @@ export default new Vuex.Store({
     }
   },
   mutations: {
-    windHeight (state, val) {
+    windHeight(state, val) {
       state.windHeight = val
     },
-    mainHead (state, val) {
+    mainHead(state, val) {
       state.header.mainHead = val;
       state.header.subHead = ''
     },
-    subHead (state, val) {
+    subHead(state, val) {
       state.header.subHead = val
     }
   }

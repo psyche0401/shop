@@ -5,18 +5,18 @@
 </template>
 
 <script>
-export default {
-  name: 'App',
-  created () {
-    window.addEventListener("resize", this.handleHeight);
-    this.$store.commit('windHeight', window.innerHeight)
-  },
-  methods: {
-    handleHeight (event) {
-      this.$store.commit('windHeight', event.target.innerHeight)
+  export default {
+    name: 'App',
+    created() {
+      window.addEventListener("resize", this.handleHeight);
+      this.$store.commit('windHeight', window.innerHeight)
+    },
+    methods: {
+      handleHeight(event) {
+        this.$store.commit('windHeight', event.target.innerHeight)
+      }
     }
   }
-}
 </script>
 
 <style>
