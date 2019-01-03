@@ -33,7 +33,7 @@ export default new Router({
           icon: 'ios-analytics'
         },
         {
-          path: '/name',
+          path: 'name',
           name: 'c',
           component: Customer
         }

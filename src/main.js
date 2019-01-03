@@ -17,7 +17,6 @@ Vue.use(iView);
 
 Vue.prototype.$http = axios;
 
-
 Vue.config.productionTip = false;
 
 
